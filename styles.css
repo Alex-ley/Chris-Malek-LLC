@@ -21,6 +21,9 @@ body {
 	font-size: 18px;
 	line-height: 1.6;
 }
+body.open {
+    overflow: hidden;
+}
 
 h1,
 h2,
@@ -32,6 +35,14 @@ p {
 a {
 	text-decoration: none;
 	color: #fff;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+#top-button:hover {
+    color: black;
 }
 
 ul {
@@ -71,6 +82,23 @@ ul {
 .underline {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.underline:hover {
+    color: var(--secondary-color);
+}
+
+.disclaimer {
+    font-size: x-small;
+    color: lightgrey;
+}
+div.disclaimer {
+    padding: 10px 20px 0px 20px;
+}
+
+h2.grid > a:hover {
+    color: black;
+    font-weight: bolder;
 }
 
 /* Section Top */
@@ -275,6 +303,10 @@ ul {
     text-decoration: none;
     transition: color 0.4s ease;
     opacity: 0;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover {
+    color: var(--secondary-color);
 }
 
 /* Show Menu */
