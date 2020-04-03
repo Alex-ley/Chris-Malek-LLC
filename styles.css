@@ -2,8 +2,8 @@
 
 :root {
 	--primary-color: #2a3436; /*d4cac4*/
-	--secondary-color: #f5c42f; /*#f5c42f*/
-    --text-color: #c5bbec; /*#c5bbec*/
+	--secondary-color: #4ca9fe; /*#f5c42f*/
+    --text-color: #ecde8d; /*#c5bbec*/
     --overlay-color: rgba(24, 39, 51, 0.904);
     --menu-speed: 0.75s;
 }
@@ -94,7 +94,7 @@ ul {
 /* Section Stream */
 .section-stream {
 	min-height: 700px;
-	background: url('https://static.thenounproject.com/png/300748-200.png') no-repeat center center/cover;
+	background: url('https://svgsilh.com/svg/890553.svg') no-repeat center center/cover;
     background-size: 600px;
 }
 
@@ -282,7 +282,7 @@ ul {
 }
   
 .menu-wrap.open > .menu > div {
-    transform: scale(1);
+    transform: scale(1) translateX(0%) translateY(-0%);
     transition-duration: var(--menu-speed);
 }
   
