@@ -106,7 +106,8 @@ ul {
 	width: 27%;
 	position: absolute;
 	top: 100px;
-	left: 50px;
+    left: 50px;
+    text-align: center;
 }
 
 .section-stream .content {
@@ -332,7 +333,11 @@ ul {
 	.section-stream .content {
 		position: static;
 		width: 100%;
-	}
+    }
+    
+    .section-stream .play {
+        text-align: center;
+    }
 
 	.section-top {
 		min-height: 200px;
@@ -362,8 +367,20 @@ ul {
 	.section-grid {
         max-height: 650px;
 		display: block;
-		margin-top: 0;
-	}
+        margin-top: 0;
+        display:flex;
+        flex-direction: column;
+    }    
+    
+    .section-grid > div:nth-child(1){
+        order:3;
+    }     
+    .section-grid > div:nth-child(2){
+        order:2;
+    }
+    .section-grid > div:nth-child(3){
+        order:1;
+    }
 
 	.footer ul {
 		display: block;
