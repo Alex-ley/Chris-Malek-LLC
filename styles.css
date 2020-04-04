@@ -24,6 +24,9 @@ body {
 body.open {
     overflow: hidden;
 }
+.white-text {
+    color: #fff !important;
+}
 
 h1,
 h2,
@@ -120,10 +123,14 @@ h2.grid > a:hover {
 }
 
 /* Section Stream */
-.section-stream {
+.section-stream, .section-main {
 	min-height: 700px;
 	background: url('https://svgsilh.com/svg/890553.svg') no-repeat center center/cover;
     background-size: 600px;
+}
+
+.section-main > div {
+    display: flex;
 }
 
 .section-stream h2 {
@@ -144,12 +151,24 @@ h2.grid > a:hover {
 	top: 130px;
 	right: 70px;
 }
+.section-main .content {
+    padding-top: 20px;
+}
 
-.section-stream .content > div, .section-grid > div {
+.section-stream .content > div,
+.section-grid > div,
+.section-main .content > div {
 	background: rgba(255, 255, 255, 0.2);
 	padding: 20px;
 	margin-bottom: 20px;
 	border-radius: 10px;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0px !important;
+}
+.no-margin-padding {
+    margin-bottom: 0px !important;
 }
 
 /* Section Grid */
