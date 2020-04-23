@@ -3,17 +3,24 @@ let rellax = new Rellax('.rellax');
 const menu_wrap = document.querySelector('.menu-wrap');
 const burger = document.getElementById('nav-icon1');
 const body = document.querySelector('body');
-burger.addEventListener('click', e => {
-    burger.classList.toggle("open");
-    menu_wrap.classList.toggle("open");
-    if (burger.classList.contains('open')){
-        disableScroll();
-        body.classList.toggle("open");
-    }else{
-        enableScroll();
-        body.classList.toggle("open");
-    }
-})
+const menuLinks = document.querySelectorAll('.menu-link');
+
+function toggleMenu(){
+  burger.classList.toggle("open");
+  menu_wrap.classList.toggle("open");
+  if (burger.classList.contains('open')){
+      disableScroll();
+      body.classList.toggle("open");
+  }else{
+      enableScroll();
+      body.classList.toggle("open");
+  }
+}
+
+burger.addEventListener('click', toggleMenu)
+menuLinks.forEach(el => el.addEventListener('click', toggleMenu));
+
+
 
 // https://stackoverflow.com/a/4770179/9792594:
 // left: 37, up: 38, right: 39, down: 40,
