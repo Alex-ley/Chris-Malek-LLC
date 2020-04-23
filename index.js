@@ -3,6 +3,7 @@ let rellax = new Rellax('.rellax');
 const menu_wrap = document.querySelector('.menu-wrap');
 const burger = document.getElementById('nav-icon1');
 const body = document.querySelector('body');
+const topButton = document.querySelector('#top-button');
 const menuLinks = document.querySelectorAll('.menu-link');
 
 function toggleMenu(){
@@ -20,7 +21,22 @@ function toggleMenu(){
 burger.addEventListener('click', toggleMenu)
 menuLinks.forEach(el => el.addEventListener('click', toggleMenu));
 
-
+window.addEventListener('mousemove', e => {
+  const b_box = topButton.getBoundingClientRect();
+  //console.log(b_box)
+  //console.log(e)
+  const x = (b_box.left + b_box.right) / 2;
+  const y = (b_box.top + b_box.bottom) / 2;
+  const clientX = e.clientX;
+  const clientY = e.clientY;
+  const innerWidth = window.innerWidth;
+  const innerHeight = window.innerHeight;
+  const maxDist = Math.sqrt(innerHeight**2 + innerWidth**2);
+  const actDist = Math.sqrt((clientY - y)**2 + (clientX - x)**2);
+  const scale = actDist / maxDist;
+  //console.log(scale);
+  topButton.style.transform = `scale(${1 + 0.15 * (1 - scale)})`;
+});
 
 // https://stackoverflow.com/a/4770179/9792594:
 // left: 37, up: 38, right: 39, down: 40,

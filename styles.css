@@ -104,6 +104,27 @@ h2.grid > a:hover {
     font-weight: bolder;
 }
 
+/* #headshot {
+    border-radius: 50%;    
+    object-fit: none;         
+} */
+
+.circular--portrait {
+    position: relative;
+    margin: auto;
+    height: 20vw;
+    width: 20vw;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+  
+  .circular--portrait img {
+    width: 105%;
+    height: auto;
+    object-position: -5px -5px;
+  }
+
 /* Section Top */
 .section-top {
 	min-height: 400px;
@@ -157,7 +178,8 @@ h2.grid > a:hover {
 
 .section-stream .content > div,
 .section-grid > div,
-.section-main .content > div {
+.section-main .content > div,
+.section-stream > div.play {
 	background: rgba(255, 255, 255, 0.2);
 	padding: 20px;
 	margin-bottom: 20px;
