@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.input-field > input');
+const inputs = document.querySelectorAll('.input-field > input, .input-field > textarea');
 
 inputs.forEach(input => {
     input.addEventListener('focus', inputFocus);
