@@ -104,6 +104,11 @@ h2.grid > a:hover {
     font-weight: bolder;
 }
 
+a:hover > i {
+    color: black;
+    font-weight: bolder;
+}
+
 /* #headshot {
     border-radius: 50%;    
     object-fit: none;         
@@ -150,15 +155,27 @@ h2.grid > a:hover {
     background-size: 600px;
 }
 
-.section-main > div {
-    display: flex;
-}
+.section-main {
+    min-height: 1500px;
+}    
 
-.section-stream h2 {
+/* .section-main > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+/* .section-main > div.play {
+    width: 200px;
+} */
+
+.section-stream h2,
+.section-main h2 {
 	font-size: 35px;
 }
 
-.section-stream .play {
+.section-stream .play,
+.section-main .play {
 	width: 27%;
 	position: absolute;
 	top: 100px;
@@ -166,7 +183,8 @@ h2.grid > a:hover {
     text-align: center;
 }
 
-.section-stream .content {
+.section-stream .content,
+.section-main .content {
 	position: absolute;
 	width: 60%;
 	top: 130px;
@@ -177,9 +195,11 @@ h2.grid > a:hover {
 }
 
 .section-stream .content > div,
+.section-main .content > div,
 .section-grid > div,
 .section-main .content > div,
-.section-stream > div.play {
+.section-stream > div.play,
+.section-main > div.play {
 	background: rgba(255, 255, 255, 0.2);
 	padding: 20px;
 	margin-bottom: 20px;
