@@ -71,7 +71,7 @@ input:not([type])+label:after, input[type=text]:not(.browser-default)+label:afte
     margin-left: 3rem;
 }
 input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
-    color: #26a69a;
+    color: var(--secondary-color);
     /* transform: translateY(-17px); */
     -webkit-transform: translateY(-17px) scale(0.8);
     transform: translateY(-17px) scale(0.8);
@@ -82,12 +82,25 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-def
     width: calc(100% - 3rem - 1.5rem);
 }
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    -webkit-box-shadow: 0 1px 0 0 #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a;
+    border-bottom: 1px solid var(--secondary-color);
+    -webkit-box-shadow: 0 1px 0 0 var(--secondary-color);
+    box-shadow: 0 1px 0 0 var(--secondary-color);
 }
-.input-field > input:focus ~ div > i {
-    color: #26a69a;
+.input-field > input:focus ~ div > i,
+.input-field > input.has-data:valid ~ div > i,
+.input-field > textarea:focus ~ div > i,
+.input-field > textarea.has-data:valid ~ div > i {
+    color: var(--secondary-color);
+}
+
+.input-field > input.has-data:invalid ~ div > i,
+.input-field > textarea.has-data:invalid ~ div > i {
+    color: #a62626 !important;
+}
+
+.input-field > input.has-data:valid ~ div > i,
+.input-field > textarea.has-data:valid ~ div > i {
+    color: #26a69a !important;
 }
 
 .icon-holder {
@@ -120,5 +133,11 @@ textarea.materialize-textarea {
     min-height: 6rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font: 400 13.3333px Arial;
+    font-size: 16px;
+}
+
+#ContactSubmit:hover {
+    color: black;
 }
 

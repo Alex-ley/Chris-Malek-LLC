@@ -62,7 +62,7 @@
                 <h3>Email <i class="far fa-envelope-open"></i></h3>
                 <p><a href="mailto:cmmalek@gmail.com">cmmalek@gmail.com</a></p>
                 <h3>Send us a message</h3>
-                <form role="form" aria-label="contact form" novalidate="" id="CntctFrm2form-wrapper" class="cf1form-wrapper"><div id="CntctFrm2wrapper" class="cf1wrapper">
+                <form role="form" aria-label="contact form" id="CntctFrm2form-wrapper" class="cf1form-wrapper"><div id="CntctFrm2wrapper" class="cf1wrapper">
                     <div>
                         <div class="input-field">                            
                             <input id="icon_name" name="name" type="text" required class="validate" data-aid="nameField" value="">
@@ -75,7 +75,7 @@
                             <div class="icon-holder"><i class="far fa-envelope-open fa-2x prefix"></i></div>
                         </div>
                         <div class="input-field">                            
-                            <input id="icon_phone" name="phone" type="tel" class="validate" data-aid="phoneField" value="">
+                            <input id="icon_phone" name="phone" type="tel" class="validate" data-aid="phoneField" value="" pattern="(?:(?:\d{3}|\(\d{3}\))([-\/\. ])\d{3}\1\d{4}|\d{10}|[+]\d{8,15})"> 
                             <label for="icon_phone">Phone</label>
                             <div class="icon-holder"><i class="fas fa-mobile-alt fa-2x prefix"></i></div>
                         </div>
