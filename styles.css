@@ -157,7 +157,11 @@ a:hover > i {
 
 .section-main {
     min-height: 1500px;
-}    
+}   
+
+.section-stream.immigration {
+    min-height: 1700px;
+} 
 
 /* .section-main > div {
     display: flex;
