@@ -48,8 +48,16 @@ a:hover {
     color: black;
 }
 
-ul {
+footer.footer > ul {
 	list-style: none;
+}
+
+ul.normal-list {
+    margin-left: 20px;
+}
+
+ul.normal-list > li {
+    padding-bottom: 10px;
 }
 
 .btn {
@@ -73,8 +81,20 @@ ul {
 	color: var(--primary-color);
 }
 
-.secondary-text {
+.highlight-text {
+	color: var(--text-color);
+}
+
+.secondary-text,
+.secondary-text > a {
 	color: var(--secondary-color);
+}
+
+.secondary-text > a:hover,
+a.secondary-text:hover,
+.highlight-text > a:hover,
+a.highlight-text:hover {
+    color: black;
 }
 
 .section {
