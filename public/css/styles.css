@@ -151,7 +151,7 @@ a:hover > i {
 /* Section Stream */
 .section-stream, .section-main {
 	min-height: 700px;
-	background: url('https://svgsilh.com/svg/890553.svg') no-repeat center center/cover;
+	background: url('../assets/balance-scale-solid.svg') no-repeat center center/cover;
     background-size: 600px;
 }
 

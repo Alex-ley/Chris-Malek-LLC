@@ -1,5 +1,6 @@
 fb_template*
 *firebase*
+.vscode
 
 # Logs
 logs
